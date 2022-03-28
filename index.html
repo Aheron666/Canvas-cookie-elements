@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Cookie&canvas</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <form method="GET" id="colorForm" action="" onsubmit="return false">
+            <div class="create_color">
+                <div class="create_block">
+                    <div class="color_tittle" style="font-weight: bold;">Create new color</div>
+                    <div class="color_input_block">
+                        <div class="color_input_name">
+                            <div class="color_subtittle">Color:</div>
+                            <div id="color_error">Please use only letters</div>
+                            <div id="color_name_error">This name is already exists</div>
+                        </div>
+                        <input type="text" class="input" id="colorInput" required>
+                    </div>
+                    <div class="color_input_block">
+                        <div class="color_input_name">
+                            <div class="color_subtittle">Type:</div>
+                        </div>
+                        <select name="" class="input" id="selectType" style="height: 35px;">
+                            <option value="rgb">RGB</option>
+                            <option value="rgba">RGBA</option>
+                            <option value="hex">HEX</option>
+                        </select>
+                    </div>
+                    <div class="color_input_block">
+                        <div class="color_input_name">
+                            <div class="color_subtittle">Code:</div>
+                            <div id="rgb_error">RGB must match [0-255], [0-255], [0-255]</div>
+                            <div id="rgba_error">RGBA must match [0-255], [0-255], [0-255], [0-1]</div>
+                            <div id="hex_error">HEX must match [#-code]</div>
+                        </div>
+                        <input type="text" class="input" id="colorCode">
+                    </div>
+                    <input type="submit" id="save" class="save_btn" value="Save">
+                </div>
+            </div>
+        </form>
+        <h1 style="margin-bottom: 50px;" class="canvas_tittle">All colors</h1>
+        <div class="new_color_container">
+            <div id="new_color">
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
